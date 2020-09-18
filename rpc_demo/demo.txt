@@ -1,0 +1,16 @@
+Code used for this demo was adapted from: 
+https://docs.oracle.com/cd/E19683-01/816-1435/rpcgenpguide-21470/index.html
+
+Steps to run: 
+Type make
+Execute ./msg_server
+type ./rprintmsg localhost <some string> <some other string>
+
+The strings will appear in a file called output in the directory
+msg_server was started.
+
+Demo:
+1) Show students the interface definition file and explain it.
+2) Show students generated client/server stubs and msg_xdr.c and explain it
+3) Show students the developer-writtn code and explain it.
+4) Run the code.

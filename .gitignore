@@ -1,0 +1,24 @@
+private/
+output/
+build/
+
+# Jupiter notebook files
+.ipynb_checkpoints/
+
+# Byte-compiled / optmized DLL files
+*.py[cod]
+__pycache__/
+
+*-eps-converted-to.pdf
+*.dvi
+*.log
+*.blg
+*.bbl
+*.aux
+*.backup
+*.tmp
+*.synctex.gz
+*.out
+*.ps
+*.toc
+.DS_store
