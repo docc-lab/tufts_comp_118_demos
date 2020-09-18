@@ -1,21 +1,22 @@
 README
-------
+======
 
 Overview
 --------
-This code demonstrates how to use ONC RPC system to send RPCs from a
-client to a server.  ONC RPC is one of the original RPC mechanisms.
-It was developed all the way back in the 1980s as part of the Network
-File System (NFS) by Sun and was used with the C programming language.
-Today, there are many RPC systems.  Some include gRPC and Apache
-Thrift.  Java has an object-oriented version of RPCs called RMI (Remote Method Invocation).
+This code demonstrates how to use ONC RPC system to
+send RPCs from a client to a server.  ONC RPC is one of the original
+RPC mechanisms.  It was developed all the way back in the 1980s as
+part of the Network File System (NFS) by Sun and was used with the C
+programming language.  Today, there are many RPC systems.  Some
+include gRPC and Apache Thrift.  Java has an object-oriented version
+of RPCs called RMI (Remote Method Invocation).
 
 At a basic level, all RPC systems are structured in the same way.
 They require as input an interface-definition file, client-side code,
 and server-side code.  The interface-definition file is paramount and
 represents a shared contract between clients and servers.  It lists
 the RPCs that can be called on servers and the data types that the RPC
-will used.  The interface-definition file is often language neutral
+will use.  The interface-definition file is often language neutral
 (i.e., written in its own language) to allow an RPC system to be used
 with multiple programming languages.  
 
@@ -46,11 +47,13 @@ disks in Thrift or protocol buffer format respectively.
 
 Code
 -----
+
 This example of ONC RPC sends a message from a client to a server.
 The message contains two arbitrary strings.  It demonstrates how ONC
-RPC can be used and how complex data types (a linked list) can be sent
-over the network using ONC RPC.  There are several files.
-Please look at all of them to understand how RPCs work.
+RPC can be used and how complex data types (in this case a short
+linked list) can be sent over the network using ONC RPC.  There are
+several files.  Please look at all of them to understand how RPCs
+work.
 
 **User_provided files**:
 
@@ -88,3 +91,14 @@ Compiling and running the code
 2) start the server by typing ./msg_server.  The server will run in the background.
 3) run ./rprintmsg localhost <some string> <some string2>
 4) The strings will be written to the file "output" in the same directory. 
+
+
+References
+------------
+ONC RPC Wiki: https://en.wikipedia.org/wiki/Open_Network_Computing_Remote_Procedure_Call.
+
+ONC RPC Developers Guide: https://docs.oracle.com/cd/E19455-01/805-7224/index.html
+
+Acknowledgements
+-----------------
+The code for this demo was adapted from the following from Chapter 3 of the ONC RPC Developers guide.  
