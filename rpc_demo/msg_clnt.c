@@ -3,15 +3,14 @@
  * It was generated using rpcgen.
  */
 
+#include <memory.h>
 #include "msg.h"
 
 /* Default timeout can be changed using clnt_control() */
 static struct timeval TIMEOUT = { 25, 0 };
 
 int *
-printmessage_1(argp, clnt)
-	struct messagelist *argp;
-	CLIENT *clnt;
+printmessage_1(struct messagelist *argp, CLIENT *clnt)
 {
 	static int clnt_res;
 

@@ -6,9 +6,7 @@
 #include "msg.h"
 
 bool_t
-xdr_messagelist(xdrs, objp)
-	XDR *xdrs;
-	messagelist *objp;
+xdr_messagelist(XDR *xdrs, messagelist *objp)
 {
 
 	if (!xdr_string(xdrs, &objp->name, 255))

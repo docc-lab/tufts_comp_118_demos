@@ -1,7 +1,7 @@
 remote: rpc rprintmsg msg_server
 
 rpc: msg.x
-	rpcgen msg.x
+	rpcgen -C msg.x
 
 rprintmsg: msg_clnt.c msg.h msg_xdr.c rprintmsg.c
 	gcc rprintmsg.c msg_xdr.c msg_clnt.c -o rprintmsg # -lnsl (nsl not needed on mac)

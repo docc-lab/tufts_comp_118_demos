@@ -24,15 +24,15 @@ printmessage_1_svc(struct messagelist *msg, struct svc_req *req)
   static int result;  /* must be static! */
   FILE *f;
   
-  f = fopen("output", "w");
-  //	f = fopen("/dev/console", "w");
-  if (f == (FILE *)NULL) {
+    f = fopen("output", "a+");
+    //    f = fopen("/dev/console", "w");
+   if (f == (FILE *)NULL) {
     result = 0;
     return (&result);
-  }
+   }
   fprintf(f, "%s %d\n", msg->name, msg->count);
   fprintf(f, "%s %d\n", msg->next->name, msg->next->count);
-  fclose(f);
+    fclose(f);
   result = 1;
   return (&result);
 }
